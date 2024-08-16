@@ -18,7 +18,10 @@ class NumberBox extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(1.0),
         child: Container(
-          color: revealed ? Colors.grey[300] : Colors.grey[400],
+          decoration: BoxDecoration(
+            color: revealed ? Colors.grey[300] : Colors.grey[400],
+            borderRadius: BorderRadius.circular(6),
+          ),
           child: Center(
             child: Text(
               revealed
@@ -28,6 +31,7 @@ class NumberBox extends StatelessWidget {
                   : '',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                fontSize: 20,
                 color: child == '1'
                     ? Colors.blue
                     : child == '2'
